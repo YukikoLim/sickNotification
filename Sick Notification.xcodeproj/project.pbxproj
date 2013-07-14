@@ -32,7 +32,7 @@
 		0B4EAB2B1792E171009FC82A /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4EAB091792E171009FC82A /* Utils.m */; };
 		0B4EAB311792E284009FC82A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4EAB301792E284009FC82A /* MobileCoreServices.framework */; };
 		0B4EAB331792E28B009FC82A /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4EAB321792E28B009FC82A /* AssetsLibrary.framework */; };
-		0B4EAB3C1792E3FC009FC82A /* AppDelegat.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4EAB3A1792E3FC009FC82A /* AppDelegat.m */; };
+		0B4EAB3F1792E5C0009FC82A /* AppDelegat.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4EAB3D1792E5C0009FC82A /* AppDelegat.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,8 +71,8 @@
 		0B4EAB091792E171009FC82A /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utils.m; path = "Sick Notification/Utils.m"; sourceTree = "<group>"; };
 		0B4EAB301792E284009FC82A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		0B4EAB321792E28B009FC82A /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		0B4EAB3A1792E3FC009FC82A /* AppDelegat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegat.m; path = ../AppDelegat.m; sourceTree = "<group>"; };
-		0B4EAB3B1792E3FC009FC82A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
+		0B4EAB3D1792E5C0009FC82A /* AppDelegat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegat.m; sourceTree = "<group>"; };
+		0B4EAB3E1792E5C0009FC82A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,8 +137,8 @@
 		0B4EAAC01792E0AE009FC82A /* Sick Notification */ = {
 			isa = PBXGroup;
 			children = (
-				0B4EAB3A1792E3FC009FC82A /* AppDelegat.m */,
-				0B4EAB3B1792E3FC009FC82A /* AppDelegate.h */,
+				0B4EAB3D1792E5C0009FC82A /* AppDelegat.m */,
+				0B4EAB3E1792E5C0009FC82A /* AppDelegate.h */,
 				0B4EAAC11792E0AE009FC82A /* Supporting Files */,
 			);
 			path = "Sick Notification";
@@ -279,7 +279,7 @@
 				0B4EAB161792E171009FC82A /* PhotosListViewController.m in Sources */,
 				0B4EAB181792E171009FC82A /* RootViewController.m in Sources */,
 				0B4EAB2B1792E171009FC82A /* Utils.m in Sources */,
-				0B4EAB3C1792E3FC009FC82A /* AppDelegat.m in Sources */,
+				0B4EAB3F1792E5C0009FC82A /* AppDelegat.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
