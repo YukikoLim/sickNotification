@@ -12,10 +12,27 @@
 		0B4EAABF1792E0AE009FC82A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4EAABE1792E0AE009FC82A /* CoreGraphics.framework */; };
 		0B4EAAC51792E0AE009FC82A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0B4EAAC31792E0AE009FC82A /* InfoPlist.strings */; };
 		0B4EAAC71792E0AE009FC82A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4EAAC61792E0AE009FC82A /* main.m */; };
-		0B4EAACB1792E0AE009FC82A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4EAACA1792E0AE009FC82A /* AppDelegate.m */; };
 		0B4EAACD1792E0AE009FC82A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4EAACC1792E0AE009FC82A /* Default.png */; };
 		0B4EAACF1792E0AF009FC82A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4EAACE1792E0AF009FC82A /* Default@2x.png */; };
 		0B4EAAD11792E0AF009FC82A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4EAAD01792E0AF009FC82A /* Default-568h@2x.png */; };
+		0B4EAB0A1792E171009FC82A /* AbsenceTypeList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B4EAAD71792E171009FC82A /* AbsenceTypeList.plist */; };
+		0B4EAB0B1792E171009FC82A /* AbsenceTypesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4EAAD91792E171009FC82A /* AbsenceTypesViewController.m */; };
+		0B4EAB0C1792E171009FC82A /* AbsenceTypesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B4EAADA1792E171009FC82A /* AbsenceTypesViewController.xib */; };
+		0B4EAB0D1792E171009FC82A /* calendar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0B4EAADB1792E171009FC82A /* calendar.jpg */; };
+		0B4EAB0F1792E171009FC82A /* F_aids.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0B4EAADF1792E171009FC82A /* F_aids.jpg */; };
+		0B4EAB101792E171009FC82A /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4EAAE11792E171009FC82A /* ImageModel.m */; };
+		0B4EAB111792E171009FC82A /* mainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B4EAAE21792E171009FC82A /* mainWindow.xib */; };
+		0B4EAB121792E171009FC82A /* MKNumberBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4EAAE41792E171009FC82A /* MKNumberBadgeView.m */; };
+		0B4EAB141792E171009FC82A /* PhotoList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4EAAE71792E171009FC82A /* PhotoList.m */; };
+		0B4EAB151792E171009FC82A /* PhotoList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B4EAAE81792E171009FC82A /* PhotoList.xib */; };
+		0B4EAB161792E171009FC82A /* PhotosListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4EAAEA1792E171009FC82A /* PhotosListViewController.m */; };
+		0B4EAB171792E171009FC82A /* PhotosListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B4EAAEB1792E171009FC82A /* PhotosListViewController.xib */; };
+		0B4EAB181792E171009FC82A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4EAAED1792E171009FC82A /* RootViewController.m */; };
+		0B4EAB191792E171009FC82A /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B4EAAEE1792E171009FC82A /* RootViewController.xib */; };
+		0B4EAB2B1792E171009FC82A /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4EAB091792E171009FC82A /* Utils.m */; };
+		0B4EAB311792E284009FC82A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4EAB301792E284009FC82A /* MobileCoreServices.framework */; };
+		0B4EAB331792E28B009FC82A /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4EAB321792E28B009FC82A /* AssetsLibrary.framework */; };
+		0B4EAB3C1792E3FC009FC82A /* AppDelegat.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4EAB3A1792E3FC009FC82A /* AppDelegat.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,11 +44,35 @@
 		0B4EAAC41792E0AE009FC82A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0B4EAAC61792E0AE009FC82A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0B4EAAC81792E0AE009FC82A /* Sick Notification-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sick Notification-Prefix.pch"; sourceTree = "<group>"; };
-		0B4EAAC91792E0AE009FC82A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		0B4EAACA1792E0AE009FC82A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0B4EAACC1792E0AE009FC82A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		0B4EAACE1792E0AF009FC82A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		0B4EAAD01792E0AF009FC82A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		0B4EAAD71792E171009FC82A /* AbsenceTypeList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AbsenceTypeList.plist; path = "Sick Notification/AbsenceTypeList.plist"; sourceTree = "<group>"; };
+		0B4EAAD81792E171009FC82A /* AbsenceTypesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AbsenceTypesViewController.h; path = "Sick Notification/AbsenceTypesViewController.h"; sourceTree = "<group>"; };
+		0B4EAAD91792E171009FC82A /* AbsenceTypesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbsenceTypesViewController.m; path = "Sick Notification/AbsenceTypesViewController.m"; sourceTree = "<group>"; };
+		0B4EAADA1792E171009FC82A /* AbsenceTypesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AbsenceTypesViewController.xib; path = "Sick Notification/AbsenceTypesViewController.xib"; sourceTree = "<group>"; };
+		0B4EAADB1792E171009FC82A /* calendar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = calendar.jpg; path = "Sick Notification/calendar.jpg"; sourceTree = "<group>"; };
+		0B4EAADF1792E171009FC82A /* F_aids.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = F_aids.jpg; path = "Sick Notification/F_aids.jpg"; sourceTree = "<group>"; };
+		0B4EAAE01792E171009FC82A /* ImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageModel.h; path = "Sick Notification/ImageModel.h"; sourceTree = "<group>"; };
+		0B4EAAE11792E171009FC82A /* ImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageModel.m; path = "Sick Notification/ImageModel.m"; sourceTree = "<group>"; };
+		0B4EAAE21792E171009FC82A /* mainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = mainWindow.xib; path = "Sick Notification/mainWindow.xib"; sourceTree = "<group>"; };
+		0B4EAAE31792E171009FC82A /* MKNumberBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MKNumberBadgeView.h; path = "Sick Notification/MKNumberBadgeView.h"; sourceTree = "<group>"; };
+		0B4EAAE41792E171009FC82A /* MKNumberBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MKNumberBadgeView.m; path = "Sick Notification/MKNumberBadgeView.m"; sourceTree = "<group>"; };
+		0B4EAAE61792E171009FC82A /* PhotoList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoList.h; path = "Sick Notification/PhotoList.h"; sourceTree = "<group>"; };
+		0B4EAAE71792E171009FC82A /* PhotoList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoList.m; path = "Sick Notification/PhotoList.m"; sourceTree = "<group>"; };
+		0B4EAAE81792E171009FC82A /* PhotoList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PhotoList.xib; path = "Sick Notification/PhotoList.xib"; sourceTree = "<group>"; };
+		0B4EAAE91792E171009FC82A /* PhotosListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotosListViewController.h; path = "Sick Notification/PhotosListViewController.h"; sourceTree = "<group>"; };
+		0B4EAAEA1792E171009FC82A /* PhotosListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotosListViewController.m; path = "Sick Notification/PhotosListViewController.m"; sourceTree = "<group>"; };
+		0B4EAAEB1792E171009FC82A /* PhotosListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PhotosListViewController.xib; path = "Sick Notification/PhotosListViewController.xib"; sourceTree = "<group>"; };
+		0B4EAAEC1792E171009FC82A /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = "Sick Notification/RootViewController.h"; sourceTree = "<group>"; };
+		0B4EAAED1792E171009FC82A /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = "Sick Notification/RootViewController.m"; sourceTree = "<group>"; };
+		0B4EAAEE1792E171009FC82A /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RootViewController.xib; path = "Sick Notification/RootViewController.xib"; sourceTree = "<group>"; };
+		0B4EAB081792E171009FC82A /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = "Sick Notification/Utils.h"; sourceTree = "<group>"; };
+		0B4EAB091792E171009FC82A /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utils.m; path = "Sick Notification/Utils.m"; sourceTree = "<group>"; };
+		0B4EAB301792E284009FC82A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		0B4EAB321792E28B009FC82A /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		0B4EAB3A1792E3FC009FC82A /* AppDelegat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegat.m; path = ../AppDelegat.m; sourceTree = "<group>"; };
+		0B4EAB3B1792E3FC009FC82A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B4EAB331792E28B009FC82A /* AssetsLibrary.framework in Frameworks */,
+				0B4EAB311792E284009FC82A /* MobileCoreServices.framework in Frameworks */,
 				0B4EAABB1792E0AE009FC82A /* UIKit.framework in Frameworks */,
 				0B4EAABD1792E0AE009FC82A /* Foundation.framework in Frameworks */,
 				0B4EAABF1792E0AE009FC82A /* CoreGraphics.framework in Frameworks */,
@@ -51,6 +94,20 @@
 		0B4EAAAE1792E0AE009FC82A = {
 			isa = PBXGroup;
 			children = (
+				0B4EAB2F1792E243009FC82A /* ImageModel */,
+				0B4EAB2E1792E22A009FC82A /* MKNumberBadge */,
+				0B4EAB2D1792E1FA009FC82A /* Images */,
+				0B4EAB2C1792E1B4009FC82A /* Resources */,
+				0B4EAAD81792E171009FC82A /* AbsenceTypesViewController.h */,
+				0B4EAAD91792E171009FC82A /* AbsenceTypesViewController.m */,
+				0B4EAAE61792E171009FC82A /* PhotoList.h */,
+				0B4EAAE71792E171009FC82A /* PhotoList.m */,
+				0B4EAAE91792E171009FC82A /* PhotosListViewController.h */,
+				0B4EAAEA1792E171009FC82A /* PhotosListViewController.m */,
+				0B4EAAEC1792E171009FC82A /* RootViewController.h */,
+				0B4EAAED1792E171009FC82A /* RootViewController.m */,
+				0B4EAB081792E171009FC82A /* Utils.h */,
+				0B4EAB091792E171009FC82A /* Utils.m */,
 				0B4EAAC01792E0AE009FC82A /* Sick Notification */,
 				0B4EAAB91792E0AE009FC82A /* Frameworks */,
 				0B4EAAB81792E0AE009FC82A /* Products */,
@@ -68,6 +125,8 @@
 		0B4EAAB91792E0AE009FC82A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0B4EAB321792E28B009FC82A /* AssetsLibrary.framework */,
+				0B4EAB301792E284009FC82A /* MobileCoreServices.framework */,
 				0B4EAABA1792E0AE009FC82A /* UIKit.framework */,
 				0B4EAABC1792E0AE009FC82A /* Foundation.framework */,
 				0B4EAABE1792E0AE009FC82A /* CoreGraphics.framework */,
@@ -78,8 +137,8 @@
 		0B4EAAC01792E0AE009FC82A /* Sick Notification */ = {
 			isa = PBXGroup;
 			children = (
-				0B4EAAC91792E0AE009FC82A /* AppDelegate.h */,
-				0B4EAACA1792E0AE009FC82A /* AppDelegate.m */,
+				0B4EAB3A1792E3FC009FC82A /* AppDelegat.m */,
+				0B4EAB3B1792E3FC009FC82A /* AppDelegate.h */,
 				0B4EAAC11792E0AE009FC82A /* Supporting Files */,
 			);
 			path = "Sick Notification";
@@ -97,6 +156,46 @@
 				0B4EAAD01792E0AF009FC82A /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0B4EAB2C1792E1B4009FC82A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0B4EAAE21792E171009FC82A /* mainWindow.xib */,
+				0B4EAAEE1792E171009FC82A /* RootViewController.xib */,
+				0B4EAAD71792E171009FC82A /* AbsenceTypeList.plist */,
+				0B4EAADA1792E171009FC82A /* AbsenceTypesViewController.xib */,
+				0B4EAAE81792E171009FC82A /* PhotoList.xib */,
+				0B4EAAEB1792E171009FC82A /* PhotosListViewController.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		0B4EAB2D1792E1FA009FC82A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				0B4EAADB1792E171009FC82A /* calendar.jpg */,
+				0B4EAADF1792E171009FC82A /* F_aids.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		0B4EAB2E1792E22A009FC82A /* MKNumberBadge */ = {
+			isa = PBXGroup;
+			children = (
+				0B4EAAE31792E171009FC82A /* MKNumberBadgeView.h */,
+				0B4EAAE41792E171009FC82A /* MKNumberBadgeView.m */,
+			);
+			name = MKNumberBadge;
+			sourceTree = "<group>";
+		};
+		0B4EAB2F1792E243009FC82A /* ImageModel */ = {
+			isa = PBXGroup;
+			children = (
+				0B4EAAE01792E171009FC82A /* ImageModel.h */,
+				0B4EAAE11792E171009FC82A /* ImageModel.m */,
+			);
+			name = ImageModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +253,14 @@
 				0B4EAACD1792E0AE009FC82A /* Default.png in Resources */,
 				0B4EAACF1792E0AF009FC82A /* Default@2x.png in Resources */,
 				0B4EAAD11792E0AF009FC82A /* Default-568h@2x.png in Resources */,
+				0B4EAB0A1792E171009FC82A /* AbsenceTypeList.plist in Resources */,
+				0B4EAB0C1792E171009FC82A /* AbsenceTypesViewController.xib in Resources */,
+				0B4EAB0D1792E171009FC82A /* calendar.jpg in Resources */,
+				0B4EAB0F1792E171009FC82A /* F_aids.jpg in Resources */,
+				0B4EAB111792E171009FC82A /* mainWindow.xib in Resources */,
+				0B4EAB151792E171009FC82A /* PhotoList.xib in Resources */,
+				0B4EAB171792E171009FC82A /* PhotosListViewController.xib in Resources */,
+				0B4EAB191792E171009FC82A /* RootViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,7 +272,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B4EAAC71792E0AE009FC82A /* main.m in Sources */,
-				0B4EAACB1792E0AE009FC82A /* AppDelegate.m in Sources */,
+				0B4EAB0B1792E171009FC82A /* AbsenceTypesViewController.m in Sources */,
+				0B4EAB101792E171009FC82A /* ImageModel.m in Sources */,
+				0B4EAB121792E171009FC82A /* MKNumberBadgeView.m in Sources */,
+				0B4EAB141792E171009FC82A /* PhotoList.m in Sources */,
+				0B4EAB161792E171009FC82A /* PhotosListViewController.m in Sources */,
+				0B4EAB181792E171009FC82A /* RootViewController.m in Sources */,
+				0B4EAB2B1792E171009FC82A /* Utils.m in Sources */,
+				0B4EAB3C1792E3FC009FC82A /* AppDelegat.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
