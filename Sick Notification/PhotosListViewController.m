@@ -21,6 +21,8 @@
 @synthesize photos = _photos;
 @synthesize urlCollector;
 @synthesize imageModelObjects;
+@synthesize delegate;
+@synthesize dataObj;
 
 - (NSMutableArray *)photos
 {
@@ -37,10 +39,21 @@
     return self;
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    if ([self.navigationController.viewControllers indexOfObject:self] == NSNotFound) {
+        [self.delegate selectedImageModel:self.dataObj];
+    }
+    [super viewWillDisappear:animated];
+}
+
 - (void)viewDidLoad
 {
 
     [super viewDidLoad];
+    
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
 
     self.imageModelObjects = [NSMutableArray array];
     for(NSURL *url in self.urlCollector)
@@ -51,8 +64,19 @@
         NSLog(@"Image model %@,",imageModelObjects);
     }
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    //Get selected image and convert to NSData before pass to root view controller
+    self.dataObj = [NSMutableArray array];
+    for(ImageModel *imgModel in imageModelObjects)
+    {
+        ImageModel *model = imgModel;
+        [model getImageWithCompletionHandler:^(UIImage *image) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.dataObj addObject:UIImageJPEGRepresentation(image, 1.0)];
+            });
+        }];
+        
+    }
+    
 }
 
 #pragma mark - Table view data source
@@ -95,6 +119,8 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
         [self.urlCollector removeObjectAtIndex:indexPath.row];
+        [self.imageModelObjects removeObjectAtIndex:indexPath.row];
+        [self.dataObj removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
     else if (editingStyle == UITableViewCellEditingStyleInsert) {

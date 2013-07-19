@@ -26,12 +26,12 @@
 @synthesize bottomToolbar;
 @synthesize imgPicker;
 @synthesize photos;
-@synthesize photoDelegate;
 @synthesize collector;
 
 NSArray *absTypeIndexPaths, *startDateIndexPaths;
 UIActionSheet *aac;
 NSURL *imageURL;
+NSMutableArray *dataObj;
 MKNumberBadgeView *numberBadge;
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -47,7 +47,7 @@ MKNumberBadgeView *numberBadge;
     
     self.navigationItem.rightBarButtonItem = test;
     
-    numberBadge = [[MKNumberBadgeView alloc] initWithFrame:CGRectMake(250, -1, 40, 40)];
+    numberBadge = [[MKNumberBadgeView alloc] initWithFrame:CGRectMake(250, -5, 40, 40)];
     numberBadge.value = collector.count;
     
     
@@ -58,7 +58,6 @@ MKNumberBadgeView *numberBadge;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     self.title = @"Sick Note";
     
     collector = [[NSMutableArray alloc]init];
@@ -72,12 +71,12 @@ MKNumberBadgeView *numberBadge;
     dataArray = [[NSMutableArray alloc] init];
     
     //First section data
-    NSArray *firstItemsArray = [[NSArray alloc] initWithObjects:@"Absence Type", @"Start Date", nil];
+    NSArray *firstItemsArray = [[NSArray alloc] initWithObjects:@"Absence Type", @"Start of Absence", nil];
     NSDictionary *firstItemsArrayDict = [NSDictionary dictionaryWithObject:firstItemsArray forKey:@"data"];
     [dataArray addObject:firstItemsArrayDict];
     
     //Second section data
-    NSArray *secondItemsArray = [[NSArray alloc] initWithObjects:@"Item 4", @"Item 5", nil];
+    NSArray *secondItemsArray = [[NSArray alloc] initWithObjects:@"Name & Department", @"Personnel Number", nil];
     NSDictionary *secondItemsArrayDict = [NSDictionary dictionaryWithObject:secondItemsArray forKey:@"data"];
     [dataArray addObject:secondItemsArrayDict];
     
@@ -138,6 +137,7 @@ MKNumberBadgeView *numberBadge;
     if([cellValue isEqual: @"Absence Type"])
     {
         cell.imageView.image = [UIImage imageNamed:@"F_aids.jpg"];
+        cell.detailTextLabel.textColor = [UIColor blackColor];
         cell.detailTextLabel.text = selectedAbsenceType;
         
         //Get AbsenceType's indexPaths for reload this Absence Type section only
@@ -145,7 +145,7 @@ MKNumberBadgeView *numberBadge;
         
         //NSLog(@"indexpath row :%i,indexpath section:%i",indexPath.row,indexPath.section);
     }
-    else if([cellValue isEqual:@"Start Date"])
+    else if([cellValue isEqual:@"Start of Absence"])
     {
         cell.imageView.image = [UIImage imageNamed:@"calendar.jpg"];
         NSDate *currentDate = [NSDate date];
@@ -157,11 +157,23 @@ MKNumberBadgeView *numberBadge;
             selectedDate = [df stringFromDate:currentDate];
         }
 
+        cell.detailTextLabel.textColor = [UIColor blackColor];
         cell.detailTextLabel.text = selectedDate;
         
         startDateIndexPaths = [NSArray arrayWithObjects:[NSIndexPath indexPathForRow:indexPath.row inSection:indexPath.section],nil];
         //NSLog(@"indexpath row :%i,indexpath section:%i",indexPath.row,indexPath.section);
         
+    }
+    else if([cellValue isEqual:@"Name & Department"])
+    {
+        cell.detailTextLabel.textColor = [UIColor blackColor];
+        cell.detailTextLabel.text = @"Lim Jessica (IFMY IT ES MA MW)";
+    }
+    
+    else if([cellValue isEqual:@"Personnel Number"])
+    {
+        cell.detailTextLabel.textColor = [UIColor blackColor];
+        cell.detailTextLabel.text = @"+60(6)251 8686";
     }
     return cell;
 }
@@ -186,7 +198,7 @@ MKNumberBadgeView *numberBadge;
         [self.navigationController pushViewController:absTypesViewController animated:YES];
         
     }
-    else if ([self.selectedCell isEqual:@"Start Date"])
+    else if ([self.selectedCell isEqual:@"Start of Absence"])
     {
         aac = [[UIActionSheet alloc] initWithTitle:nil
                                           delegate:self
@@ -197,7 +209,7 @@ MKNumberBadgeView *numberBadge;
         myDatePicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0.0, 44.0, 0.0, 0.0)];
         
         myDatePicker.datePickerMode = UIDatePickerModeDate;
-        myDatePicker.maximumDate=[NSDate date];
+        //myDatePicker.maximumDate=[NSDate date];
         
         
         [self.myDatePicker addTarget:self action:@selector(datePickerDateChanged:) forControlEvents:UIControlEventValueChanged];
@@ -227,6 +239,10 @@ MKNumberBadgeView *numberBadge;
     
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 55;
+}
+
 -(void) selectedDataAbsenceType:(NSString*) selectedData
 {
     selectedAbsenceType = selectedData;
@@ -235,6 +251,11 @@ MKNumberBadgeView *numberBadge;
     [mainTable reloadRowsAtIndexPaths:absTypeIndexPaths withRowAnimation:UITableViewRowAnimationFade];
     
     NSLog(@"Selected type is %@",selectedAbsenceType);
+}
+
+-(void) selectedImageModel:(NSMutableArray *)dataObjArray
+{
+    dataObj = dataObjArray;
 }
 
 //listen to changes in the date picker and just log them
@@ -310,6 +331,7 @@ MKNumberBadgeView *numberBadge;
     NSLog(@"Collector in root %@",self.collector);
     
     [picker dismissViewControllerAnimated:YES completion:nil];
+    photoListViewController.delegate = self;
     [self.navigationController pushViewController:photoListViewController animated:YES];
 
 
@@ -379,10 +401,33 @@ MKNumberBadgeView *numberBadge;
     PhotosListViewController *photoListViewController = [[PhotosListViewController alloc]initWithNibName:@"PhotosListViewController" bundle:nil];
     photoListViewController.urlCollector = self.collector;
     NSLog(@"Collector in root %@",self.collector);
+    photoListViewController.delegate = self;
     [self.navigationController pushViewController:photoListViewController animated:YES];
     
 }
 
+- (void)getPreparedData
+{
+    NSLog(@"##########Data to be send##########");
+    NSLog(@"1. %@",self.selectedAbsenceType);
+    NSLog(@"2. %@",self.selectedDate);
+    int i =0;
+    for(NSData *dataObject in dataObj)
+    {
+        NSLog(@"%d",i + 1);
+        i++;
+    }
+    NSLog(@"##########Data to be send##########");
+    
+}
+
 - (IBAction)sendSickNote:(id)sender {
+    [self getPreparedData];
+    UIAlertView *alert;
+    alert = [[UIAlertView alloc] initWithTitle:@"Status"
+                                       message:@"Successfull"
+                                      delegate:self cancelButtonTitle:@"Ok"
+                             otherButtonTitles:nil];
+    [alert show];
 }
 @end

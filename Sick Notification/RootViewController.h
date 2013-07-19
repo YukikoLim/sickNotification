@@ -8,13 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "AbsenceTypesViewController.h"
+#import "PhotosListViewController.h"
 #import <MobileCoreServices/MobileCoreServices.h>
 
-@protocol photoListViewControllerDelegate <NSObject>
--(void) collectedPhoto:(UIImage*) selectedPhoto;
-@end
-
-@interface RootViewController : UIViewController <absenceTypeViewControllerDelegate,UIPickerViewDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+@interface RootViewController : UIViewController <photosListViewControllerDelegate,absenceTypeViewControllerDelegate,UIPickerViewDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 {
 
     IBOutlet UITableView *mainTable;
@@ -23,7 +20,6 @@
     UIImagePickerController *imgPicker;
     IBOutlet UIBarButtonItem *takePhotoButton;
     IBOutlet UIBarButtonItem *uploadAttachement;
-     __weak id<photoListViewControllerDelegate>photoDelegate;
 }
 
 @property (nonatomic,retain) NSString *selectedCell;
@@ -33,7 +29,6 @@
 @property (nonatomic,weak) IBOutlet UIToolbar *bottomToolbar;
 @property (nonatomic, retain) UIImagePickerController *imgPicker;
 @property (nonatomic, strong) NSMutableArray * photos;
-@property (nonatomic,weak) id<photoListViewControllerDelegate> photoDelegate;
 @property (nonatomic,strong) NSMutableArray *collector;
 
 - (IBAction)getPhoto:(id)sender;
